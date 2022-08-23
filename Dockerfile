@@ -3,6 +3,7 @@ FROM ubuntu:20.04
 ARG POWERSHELL_VERSION=7.1.3\*
 ARG NODEJS_VERSION=16
 
+
 SHELL ["/bin/bash", "-eux", "-o", "pipefail", "-c"]
 
 # Do not include CMD or ENTRYPOINT directives.
