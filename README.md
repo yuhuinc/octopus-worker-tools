@@ -6,8 +6,10 @@ execution container feature with Octopus Deploy.
 Tools include
 * Pulumi
 * [AWS cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html#getting-started-install-instructions)
+* AWS eb cli
 * [nodejs](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)
 * yarn
+* python 3
 
 # Notes
 Octopus Deploy documentation includes
