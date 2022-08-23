@@ -1,8 +1,8 @@
-# Documenation
-
 FROM ubuntu:20.04
 
+ARG POWERSHELL_VERSION=7.1.3\*
 ARG NODEJS_VERSION=16
+
 
 SHELL ["/bin/bash", "-eux", "-o", "pipefail", "-c"]
 
@@ -55,6 +55,6 @@ RUN if [ "_$(uname -m)_" == "_x86_64_" ] ; then \
         rm -rf /var/lib/apt/lists/* && \
         rm -f packages-microsoft-prod.deb ; \
     else \
-        echo "Not installing Powershell core." ; \
+        echo "Not installing Powershell core ${POWERSHELL_VERSION}" ; \
         echo "Build using x86_64 architecture to work with Octopus Deploy." ; \
     fi
