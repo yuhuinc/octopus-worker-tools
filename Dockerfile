@@ -13,11 +13,13 @@ RUN apt-get update -qq && \
     apt-get install -y --no-install-recommends \
         apt-transport-https \
         curl \
+        python3-pip \
         software-properties-common \
         unzip \
         wget && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
+    pip install awsebcli~=3.20 && \
     curl -fsSL https://get.pulumi.com | sh
 
 RUN wget -O- https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | tee /usr/share/keyrings/yarnpkg-archive-keyring.gpg ; \
